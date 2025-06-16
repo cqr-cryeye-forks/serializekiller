@@ -216,7 +216,7 @@ def jenkins(url, port):
             if "rO0AB" in data2:
                 mutex.acquire()
                 print " - (possibly) Vulnerable Jenkins: " + url + " (" + str(port) + ")"
-                saveToFile('[+] Jenkins: ' + ':' + str(port) + '\n')
+                saveToFile('[+] Jenkins: ' + url + ':' + str(port) + '\n')
                 mutex.release()
                 return True
     except:
@@ -253,7 +253,7 @@ def jboss(url, port, retry=False):
     if "\xac\xed\x00\x05" in output:
         mutex.acquire()
         print " - (possibly) Vulnerable JBOSS: " + url + " (" + port + ")"
-        saveToFile('[+] JBoss: ' + ':' + port + '\n')
+        saveToFile('[+] JBoss: ' + url + ':' + port + '\n')
         mutex.release()
         return True
     return False
