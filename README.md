@@ -37,7 +37,7 @@ If you want to scan non-default ports, you can specify those ports in the target
 
 ## I've patched (some) of my servers. Will SerializeKiller detect that?
 Yes. And No. We couldn't find a way to verify a patched WebSphere server (OK, we could run the exploit, but thats not desirable).
-AFAIK it will detect a patched Jenkins, Jboss and Weblogic.
+AFAIK it will detect a patched Jenkins, Jboss and Weblogic. To test a server you can use a [vulnerability management solution](https://netcaptain.io) that is able to find missing patches.
 *We decided to mark vulnerable WebSphere servers as possibly vulnerable, because we can't verify the patch.*
 
 ## I want to contribute
